@@ -73,6 +73,8 @@ class SignupActivity : AppCompatActivity() {
                 editor.putString(PASSWORD_KEY, etPass.text.toString())
                 editor.apply()
                 finish()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
             }
