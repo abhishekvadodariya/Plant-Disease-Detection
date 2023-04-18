@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Plant Disease Detection</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="email">Please Enter Email Address</string>
+    <string name="password">Enter your Password</string>
+    <string name="confirm_password">Enter your Confirm Password</string>
+    <string name="signed">SignUp</string>
+    <string name="already_have_an_account_login">Already Have An Account Login</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_sign_in">Dont Have an Account Signin</string>
+
+
+</resources>

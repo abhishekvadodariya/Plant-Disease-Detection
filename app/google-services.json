@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "884339353407",
+    "project_id": "plant-disease-detection-dd8cd",
+    "storage_bucket": "plant-disease-detection-dd8cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884339353407:android:1f9531cdba3f4292ac158a",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.plantdiseasedetection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884339353407-gbqaf2m33itg6um6gktqkll7lrm14ng1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYQ14FBiEm2pBRNYuERWPhJfEiKrPdfsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884339353407-gbqaf2m33itg6um6gktqkll7lrm14ng1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
