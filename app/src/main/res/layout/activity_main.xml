@@ -5,12 +5,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/font_size_large"
     tools:context=".MainActivity">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"/>
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/a_image_scanner_btn_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_micro4"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:text="Camera" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/a_image_scanner_btn_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_micro4"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:text="Gallery" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/a_image_scanner_iv_code"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_image_search_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a_image_scanner_btn_get_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_micro4"
+            android:layout_marginTop="@dimen/margin_small"
+            android:padding="@dimen/padding_small"
+            android:text="Get Result" />
+
+        <TextView
+            android:id="@+id/a_main_tv_result"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textAlignment="center" />
+
+        <ProgressBar
+            android:id="@+id/a_image_scanner_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
