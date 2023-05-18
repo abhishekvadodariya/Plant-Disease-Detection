@@ -23,7 +23,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.google.android.material.button.MaterialButton
 import org.tensorflow.lite.DataType
-import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import uk.ac.tees.plantdiseasedetection.ml.MobileNetV2
 import java.io.*
@@ -91,7 +90,8 @@ class MainActivity : AppCompatActivity() {
         mbGetResult.setOnClickListener(View.OnClickListener {
 
             var bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
-            val byteBuffer: ByteBuffer = bitmapToByteBuffer(bitmap, 256, 256)
+            val resized = Bitmap.createScaledBitmap(bitmap, 256, 256, true)
+            val byteBuffer: ByteBuffer = bitmapToByteBuffer(resized, 256, 256)
             val model = MobileNetV2.newInstance(this)
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 256, 256, 3), DataType.FLOAT32)
             inputFeature0.loadBuffer(byteBuffer)
@@ -109,7 +109,6 @@ class MainActivity : AppCompatActivity() {
         // get 1D array of width * height pixels in image
         val intValues = IntArray(width * height)
         image.getPixels(intValues, 0, image.width, 0, 0, image.width, image.height)
-
         // iterate over pixels and extract R, G, and B values. Add to bytebuffer.
         var pixel = 0
         for (i in 0 until width) {

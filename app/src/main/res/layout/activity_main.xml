@@ -49,7 +49,7 @@
         <ImageView
             android:id="@+id/a_image_scanner_iv_code"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:adjustViewBounds="true"
             android:src="@drawable/ic_baseline_image_search_24" />
 
